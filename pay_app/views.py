@@ -8,8 +8,8 @@ import json
 token_api_url = "https://sep.shaparak.ir/onlinepg/onlinepg"
 verify_url = "https://sep.shaparak.ir/verifyTxnRandomSessionkey/ipg/VerifyTransaction"
 
-TerminalId = ""  # SET Your Terminal Id HERE
-RedirectURL = "http://localhost:8000/pay/verify-saman"  # SET CALLBACK URL THERE
+TerminalId = "14803485"  # SET Your Terminal Id HERE
+RedirectURL = "https://mehrashop.com/pay/verify-saman"  # SET CALLBACK URL THERE
 
 
 def go_to_gateway(req):
