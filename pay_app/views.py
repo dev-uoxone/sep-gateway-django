@@ -4,6 +4,8 @@ import time
 import math
 import requests
 import json
+from django.views.decorators.csrf import csrf_exempt
+
 
 token_api_url = "https://sep.shaparak.ir/onlinepg/onlinepg"
 verify_url = "https://sep.shaparak.ir/verifyTxnRandomSessionkey/ipg/VerifyTransaction"
@@ -35,7 +37,7 @@ def go_to_gateway(req):
 
     return HttpResponse("ERROR CODE : "+str(resObj['status']))
 
-
+@csrf_exempt
 def verify(req):
     if req.POST != "POST":
         return HttpResponse("METHOD ERROR")
